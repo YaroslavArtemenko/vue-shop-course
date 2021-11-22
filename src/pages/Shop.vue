@@ -4,7 +4,14 @@
     <section>
       <div class="container">
         <h1>Shop Page</h1>
-        <ShopItem></ShopItem>
+        <div class="item__wrapper">
+          <ShopItem
+              v-for="product in shopList"
+              :key="product.id"
+              :product="product"
+          >
+          </ShopItem>
+        </div>
       </div>
 
     </section>
@@ -14,10 +21,11 @@
 
 <script>
 import ShopItem from "../components/ShopItem";
+
 export default {
   name: "Shop",
   components: {ShopItem},
-  data () {
+  data() {
     return {
       shopList: null
     }
