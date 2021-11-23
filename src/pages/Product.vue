@@ -3,9 +3,19 @@
 
     <section>
       <div class="container">
-        <img :src="product.img" :alt="product.title">
-        <h1>{{ product.title }}</h1>
-        <p>{{ product.descr }}</p>
+        <div class="product__wrapper">
+
+<!--          slider-->
+          <div class="product-slider">
+<!--            <img :src="product.img" :alt="product.title">-->
+          </div>
+
+<!--          content-->
+          <div class="product-content">
+            <h1 class="title">{{ product.title }}</h1>
+            <p>{{ product.descr }}</p>
+          </div>
+        </div>
       </div>
 
     </section>
@@ -16,7 +26,7 @@
 <script>
 export default {
   name: "Product",
-  data () {
+  data() {
     return {
       product: null
     }
@@ -30,6 +40,15 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="scss">
+.product__wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.product-slider,
+.product-content {
+  max-width: 48%;
+  text-align: center;
+}
 </style>
