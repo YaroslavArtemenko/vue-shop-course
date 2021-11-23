@@ -60,4 +60,9 @@ export default {
   max-width: 48%;
   text-align: center;
 }
+.VueCarousel-inner {
+  visibility: visible!important;
+  flex-basis: 100% !important;
+  width: 100% !important;
+}
 </style>
